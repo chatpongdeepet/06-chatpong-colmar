@@ -16,6 +16,7 @@ a {
 }
 
 :root {
+    --gray-0: #e6e6e6;
     --gray-1: #A6A6A6;
     --gray-2: #5F6673;
     --gray-3: #343840;
@@ -24,10 +25,14 @@ a {
 
 /* Desktop navbar */
 .desktop {
+    position: fixed;
+    width: 100%;
+    background-color: white;
     display: none;
     justify-content: space-between;
     height: 64px;
     padding: 0px 24px;
+    z-index: 1000;
 }
 
 .desktop a, .nav-link{
@@ -50,7 +55,56 @@ a {
     padding: 0px 16px;
 }
 
+main {
+    position: relative;
+    top: 64px;
+    height: 4000px;
+}
 
+/* Hero */
+.hero {
+    display: flex;
+    width: 100%;
+    background-color: var(--gray-0);
+}
+
+.hero img{
+    width: 60%;
+    padding: 24px;
+}
+
+.info {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--gray-2);
+    width: 35%;
+}
+
+.info h1{
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+
+.info p{
+    font-weight: 600;
+    padding-bottom: 1.5rem;
+}
+
+.info button{
+    padding: 0.5rem;
+    font-weight: 800;
+    background-color: var(--gray-3);
+    color: aliceblue;
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.info button:hover{
+    box-shadow: 0 5px 15px var(--gray-2);
+    text-transform: uppercase;
+}
 
 
 
@@ -69,7 +123,7 @@ a {
 }
 
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
     .desktop {
         display: flex;
     }
@@ -77,4 +131,46 @@ a {
     .mobile {
         display: none;
     }
+
 }
+
+/* Display width < 800px */
+@media screen and (max-width: 800px) {
+    .mobile {
+        position: fixed;
+        z-index: 1000;
+        background-color: white;
+        width: 100%;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero img{
+        width: 100%;
+        padding: 0;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 32px 16px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .info p{
+        padding-top: 32px;
+        padding-bottom: 24px;
+    }
+
+    .info button{
+        width: 100%;
+        background-color: var(--gray-1);
+    }
+    
+}
+
