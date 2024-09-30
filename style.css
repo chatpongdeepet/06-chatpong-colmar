@@ -60,7 +60,7 @@ a {
 main {
     position: relative;
     top: 64px;
-    height: 4000px;
+    /* height: 4000px; */
 }
 
 /* Hero */
@@ -219,26 +219,61 @@ main {
 
 /* Thesis Section*/
 .thesis {
+    padding-bottom: 32px;
+}
+.thesis-section {
     display: flex;
+    margin: 32px 0;
+}
+
+.thesis h2 {
+    text-align: center;
+    padding-top: 32px;
 }
 
 .thesis__main {
     width: 60%;
-    padding: 32px 24px;
+    padding: 0px 24px;
+    margin-bottom: 24px;
 }
-
 
 .thesis__main video{
     width: 100%;
     height: auto;
 }
 
-
-.infomation__main h1, .infomation__main p{
-    margin-top: 32px;
-    margin-bottom: 24px;
+.thesis__main h1, .thesis__main p{
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
+.thesis__main__card {
+    width: 40%;
+}
+
+.thesis__main__card img{
+    width: 35%;
+}
+
+.thesis__main__card figure {
+    border: none;
+}
+
+/* Footer */
+footer {
+    padding: 16px 24px;
+    border-top: 1px solid var(--gray-0);
+    color: var(--gray-1);
+}
+
+footer section {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer section a{
+    color: var(--gray-1);
+}
 
 /* Mobile navbar */
 .mobile nav {
@@ -308,7 +343,7 @@ main {
 
     .info button{
         width: 100%;
-        background-color: var(--gray-1);
+        background-color: var(--gray-3);
     }
 
     /* Feature */
@@ -352,7 +387,8 @@ main {
 
     .course {
         width: 100%;
-        padding: 16px 16px 24px 16px;
+        padding: 16px 16px 0px 16px;
+        /* background-color: #212226; */
     }
 
     .course-card {
@@ -371,10 +407,27 @@ main {
 
     .course-title {
         padding: 16px 16px 24px 16px;
-        background-color: var(--gray-1);
-        color: white;
+        background-color: rgb(199, 199, 199);
+        color: var(--gray-2);
         border-radius: 2px;
+    }
 
+    .course-title:hover {
+        background-color: #343840;
+        color: white;
+    }
+
+    /* Thesis Section */
+    .thesis__main {
+        width: 100%;
+    }
+
+    .thesis__main h1, .thesis__main p {
+        display: none;
+    }
+
+    .thesis__main__card {
+        display: none;
     }
 }
 
