@@ -110,7 +110,6 @@ main {
 
 /* Informaion Section */
 .infomation {
-    /* background-color: aqua; */
     display: flex;
 }
 
@@ -142,20 +141,22 @@ main {
 
 .infomation__main__card img{
     width: 35%;
+    margin-top: 16px;
 }
 
 
 /* Card */
-.card figure:first-child {
-    margin-top: 16px;
-}
 
 .card figure {
     display: flex;
     align-items: center;
-    border: 1px solid var(--gray-1);
+    border: 1px solid var(--gray-0);
     width: 100%;
     padding: 16px;
+}
+
+.card figure:hover {
+    background-color: var(--gray-1);
 }
 
 .card figcaption {
@@ -168,6 +169,75 @@ main {
     padding-bottom: 8px;
 }
 
+/* Learning */
+.learning {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray-0);
+    padding: 32px 72px;
+}
+
+
+.course-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 32px;
+    grid-gap: 32px;
+}
+
+.course-card a {
+    color: var(--gray-3);
+    background-color: white;
+}
+
+.course-card a:hover {
+    background-color: var(--gray-1);
+}
+
+.course-card img{
+    width: 100%;
+}
+
+.course-card figcaption{
+    margin: 16px;
+    color: var(--gray-3);
+}
+
+.course-card figcaption p{
+    font-size: 0.85em;
+    color: var(--gray-2);
+}
+
+.course-card__categories {
+    margin: 8px 0;
+    font-weight: 100;
+    color: var(--gray-2);
+}
+
+/* Thesis Section*/
+.thesis {
+    display: flex;
+}
+
+.thesis__main {
+    width: 60%;
+    padding: 32px 24px;
+}
+
+
+.thesis__main video{
+    width: 100%;
+    height: auto;
+}
+
+
+.infomation__main h1, .infomation__main p{
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
 
 
 /* Mobile navbar */
@@ -183,7 +253,7 @@ main {
     filter: invert(18%) sepia(6%) saturate(1374%) hue-rotate(182deg) brightness(90%) contrast(85%);
 }
 
-
+/* Display width > 800px */
 @media screen and (min-width: 800px) {
     .desktop {
         display: flex;
@@ -274,5 +344,37 @@ main {
         width: 100%;
     }
 
+    /* Learning */
+    .learning{
+        background-color: white;
+        padding: 32px 16px;
+    }
+
+    .course {
+        width: 100%;
+        padding: 16px 16px 24px 16px;
+    }
+
+    .course-card {
+        display: block;
+        width: 100%;
+    }
+
+    .course-card figure{
+        background-color: white;
+        width: 100%;
+    }
+    
+    .course-card img, .course-card p, .course-card__categories{
+        display: none;
+    }
+
+    .course-title {
+        padding: 16px 16px 24px 16px;
+        background-color: var(--gray-1);
+        color: white;
+        border-radius: 2px;
+
+    }
 }
 
