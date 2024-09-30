@@ -66,7 +66,6 @@ main {
 /* Hero */
 .hero {
     display: flex;
-    width: 100%;
     background-color: var(--gray-0);
 }
 
@@ -194,7 +193,7 @@ main {
 }
 
 .course-card a:hover {
-    background-color: var(--gray-1);
+    background-color: rgb(194, 196, 207);
 }
 
 .course-card img{
@@ -264,6 +263,7 @@ footer {
     padding: 16px 24px;
     border-top: 1px solid var(--gray-0);
     color: var(--gray-1);
+    font-size: 0.75em;
 }
 
 footer section {
@@ -273,6 +273,7 @@ footer section {
 
 footer section a{
     color: var(--gray-1);
+    padding: 0px 16px;
 }
 
 /* Mobile navbar */
